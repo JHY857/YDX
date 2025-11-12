@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:padding="16dp"
+     android:orientation="vertical">
+
+    <EditText
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:hint="词条标题"
+         android:padding="8dp"
+         android:id="@+id/et_title" />
+
+    <EditText
+         android:layout_height="150dp"
+         android:layout_width="match_parent"
+         android:gravity="top"
+         android:hint="词条内容"
+         android:padding="8dp"
+         android:layout_marginTop="8dp"
+         android:inputType="textMultiLine"
+         android:id="@+id/et_content" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="horizontal"
+         android:layout_marginTop="16dp">
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:layout_marginRight="8dp"
+             android:layout_weight="1"
+             android:id="@+id/btn_cancel"
+             android:text="取消" />
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:layout_marginRight="8dp"
+             android:layout_weight="1"
+             android:id="@+id/btn_confirm"
+             android:text="确认" />
+
+    </LinearLayout>
+
+</LinearLayout>
