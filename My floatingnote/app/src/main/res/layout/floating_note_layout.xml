@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/note_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#80000000"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_minimize"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_minimize" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_text_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="文本菜单" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_settings" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close" />
+
+    </LinearLayout>
+
+    <!-- 文本操作菜单（默认隐藏） -->
+    <LinearLayout
+        android:id="@+id/text_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#60000000"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_select_all"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="全选"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="复制"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_cut"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="剪切"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_paste"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="粘贴"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <!-- 内容区域 -->
+    <EditText
+        android:id="@+id/et_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:background="@android:color/transparent"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:gravity="top"
+        android:hint="点击输入便签内容..."
+        android:inputType="textMultiLine|textCapSentences"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textIsSelectable="true"
+        android:longClickable="true" />
+
+</LinearLayout>
